@@ -1,884 +1,515 @@
-@import url('https://fontmeme.com/fonts/stand-alone-mjtype-font/');
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Netflix Font', sans-serif;
-}
-
-html {
-    font-size: 10px;
-    overflow-x: hidden;
-}
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Martel+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 body {
-    background: #000000;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+
+  background-color: rgba(8, 8, 8, 0.89);
 }
 
-header {
-    background-image: url(./assets/img/header_bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 68.5rem;
-    border-bottom: .8rem solid #222222;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  min-height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  align-self: center;
 }
 
-header .bg_shadow {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+.navbar li {
+  margin: 0 50px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.navbar li:nth-child(2) {
+  margin-top: -10px;
+  margin-right: 70px;
+}
+.logo img {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
 
-nav {
-    padding: 1.75rem 17rem;
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
 }
 
-nav ul {
+.buttons {
+  background-color: #e50914;
+  padding: 7px 17px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border-radius: 3px;
+}
+
+.main {
+  width: 100%;
+  margin-top: -100px;
+  background-size: cover;
+  align-items: center;
+  overflow-x: hidden;
+  justify-content: center;
+  display: flex;
+  background-position: center;
+  min-height: 710px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://assets.nflxext.com/ffe/siteui/vlv3/a1dc92ca-091d-4ca9-a05b-8cd44bbfce6a/f9368347-e982-4856-a5a4-396796381f28/RS-en-20191230-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+}
+
+.area {
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.area h1 {
+  font-size: 60px;
+  word-spacing: 15px;
+  line-height: 75px;
+}
+
+.area h3 {
+  margin-top: -30px;
+  font-size: 27px;
+  font-weight: normal;
+}
+
+.search {
+  width: 150%;
+  background-color: none;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.box {
+  width: 100%;
+  min-height: 65px;
+}
+
+.try {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #e50914;
+  min-height: 70px;
+  width: 70%;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.area h4 {
+  margin-top: 10px;
+  font-weight: normal;
+}
+.container1 {
+  width: 100%;
+  min-height: 460px;
+  background-color: black;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.container1 img {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  object-fit: contain;
+  object-position: center;
+  align-self: center;
+
+  max-width: 100%;
+  height: 350px;
+}
+
+.container1 .image {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  object-fit: contain;
+}
+
+.text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: center;
+  align-content: center;
+}
+.text p {
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.text h1 {
+  font-size: 3.125rem;
+}
+
+.question {
+  width: 100%;
+  min-height: 950px;
+  background-color: #000;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.question h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.quest {
+  width: 51%;
+  min-height: 75px;
+  background-color: #303030;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  text-align: left;
+  flex-direction: row;
+  margin: 5px 0;
+}
+
+.quest .textbox {
+  display: flex;
+  text-align: left;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-self: center;
+  font-size: 25px;
+  margin: 0 30px;
+  word-spacing: 5px;
+  text-align: left;
+}
+
+.quest i {
+  margin: 0 30px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.quest:focus {
+  background-color: red;
+}
+
+.search1 {
+  width: 50%;
+  background-color: none;
+  min-height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.box1 {
+  width: 100%;
+  min-height: 65px;
+}
+
+.try1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #e50914;
+  min-height: 70px;
+  width: 70%;
+  color: white;
+  font-size: 30px;
+  margin: 50px 0;
+  text-transform: uppercase;
+}
+
+.question h4 {
+  color: white;
+  margin-top: -20px;
+  padding-bottom: 40px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 375px;
+  background-color: black;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:space-around;
+
+}
+
+.footercon {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50px;
+  background-color: transparent;
+}
+
+.footer .flex1 {
+  color:#999;;
+  justify-content:space-around;
+  align-items:flex-start;
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  width:100%;
+  font-size: 17px;
+  min-height: 30px;
+
+}
+
+.footer .flex1 h5 {
+  align-self:flex-start;
+}
+
+.list1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: flex-start;
+  align-self: center;
+  justify-content: center;
+  min-height:50px;
+  font-size: 13px;
+  padding: 0px 70px;
+  text-align: left;
+}
+
+.list1 li {
+  font-size: 13px;
+  margin: 7px -10px;
+  list-style-type: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-items: center;
+  align-self: flex-start;
+  justify-content: center;
+}
+
+.list1 li a {
+  color: #999;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+li a {
+  font-size: 13px;
+  text-align: center;
+  color: #999;
+}
+
+
+.footertxt {
+  color:white;
+  display:flex;
+  flex-direction:row;
+  align-items:flex-end;
+  justify-content: flex-end;
+}
+
+.end {
+  width:100%;
+  min-height:50px;
+background-color: black;
+justify-content:space-around;
+align-items:flex-start;
+display: flex;
+flex-direction:row;
+flex-wrap:wrap;
+color:#999;
+margin-top:-60px;
+}
+
+.end h2 {
+  display:flex;
+  flex-direction: row;
+font-size:16px;
+}
+
+@media (min-width: 250px) and (max-width: 980px) {
+  body {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-between;
-}
+    align-self: center;
+  }
 
-nav ul li .logo {
-    width: 15rem;
-}
+  .area h1 {
+    font-size: 40px;
+    line-height:60px;
+  }
 
-nav ul li .login_btn {
-    background-color: #e50913;
-    color: white;
-    padding: .75rem 1.5rem;
-    border-radius: .6rem;
-    border: none;
-    transition: .2s;
-    cursor: pointer;
-    font-weight: 550;
-    font-size: 1.45rem;
-}
+  .area h3 {
+    margin-top: 10px;
+  }
 
-nav ul li .login_btn:hover {
-    background-color: #c50b14;
-}
-
-header .header_content {
+  .container1 img {
+    width: 60%;
+  }
+  .navbar {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-header .header_content h1 {
-    color: white;
-    font-size: 5.5rem;
-    font-weight: bold;
-
-}
-
-header .header_content h3 {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: normal;
-    margin: 2rem 0;
-}
-
-header .header_content h4 {
-    color: white;
-    font-size: 2rem;
-    font-weight: normal;
-}
-
-header .header_content .email_sec {
-    margin: 2rem 0;
-    display: flex;
-    gap: .8rem;
-}
-
-header .header_content .email_sec input {
-    background-color: #1f1919;
-    border: 1px solid grey;
-    color: lightgrey;
-    padding: 1.6rem;
-    outline: none;
-    border-radius: .45rem;
-    width: 34rem;
-}
-
-header .header_content .email_sec .get_started_btn {
-    background-color: #e50913;
-    border: none;
-    color: white;
-    height: 100%;
-    padding: 1rem 2rem;
-    font-size: 2.3rem;
-    font-weight: 600;
-    border-radius: .45rem;
-    transition: .2s;
-    cursor: pointer;
-}
-
-header .header_content .email_sec .get_started_btn i {
-    margin-left: 1.2rem;
-}
-
-header .header_content .email_sec .get_started_btn:hover {
-    background-color: #c50b14;
-}
-
-header .header_content .email_sec input::placeholder {
-    color: lightgrey;
-}
-
-
-
-
-section {
-    padding: 10rem 15rem;
-    border-bottom: .8rem solid #222222;
-}
-
-#watchTv {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-}
-
-#watchTv .content_area {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-}
-
-#watchTv .content_area h1 {
-    color: white;
-    font-size: 5rem;
-}
-
-#watchTv .content_area h3 {
-    color: white;
-    font-size: 2.4rem;
-    font-weight: normal;
-    margin-top: 1.5rem;
-}
-
-#watchTv .screen_area img {
-    position: relative;
-    z-index: 1;
-}
-
-#watchTv .screen_area {
-    position: relative;
-}
-
-#watchTv .video_area {
-    position: absolute;
-    top: 9rem;
-    left: 8rem;
-}
-
-
-/* downloadShows starting form here */
-#downloadShows {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-}
-
-#downloadShows .content_area {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-}
-
-#downloadShows .content_area h1 {
-    color: white;
-    font-size: 5rem;
-}
-
-#downloadShows .content_area h3 {
-    color: white;
-    font-size: 2.4rem;
-    font-weight: normal;
-    margin-top: 1.5rem;
-}
-
-#downloadShows .screen_area {
-    position: relative;
-}
-
-#downloadShows .screen_area img {
-
-    z-index: 1;
-    width: 90%;
-}
-
-#downloadShows .screen_area .box_area {
-    position: absolute;
-    bottom: 3rem;
-    left: 12.5rem;
     background-color: black;
-    border: 2px solid grey;
-    border-radius: .7rem;
-    padding: .75rem;
-    width: 30rem;
-    display: flex;
     align-items: center;
-}
+    justify-content: center;
+    padding: 0;
+    min-height: 250px;
+    margin-bottom: 30px;
 
-#downloadShows .screen_area .box_area img {
-    width: 5rem;
-}
+  }
 
-#downloadShows .screen_area .box_area .text_area {
-    padding-left: 1.5rem;
-}
 
-#downloadShows .screen_area .box_area .text_area h5 {
-    color: white;
-    font-size: 1.5rem;
-}
 
-#downloadShows .screen_area .box_area .text_area h6 {
-    color: #0071eb;
-    font-size: 1.3rem;
-}
-
-#downloadShows .screen_area .box_area i {
-    color: white;
-    padding-right: 1rem;
-    margin-left: auto;
-    font-size: 1.75rem;
-}
-
-/* WATCH EVERYWHERE SECTION STARTS HERE */
-#watchEverywhere {
-    display: grid;
-    grid-template-columns: repeat(1, 34%);
-}
-
-#watchEverywhere .content_area {
+  .search {
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: center;
+    margin: 30px;
+    width: 50%;
+    margin: 0 10px;
+  }
 
-}
+  .box {
+    width: 100%;
+    margin-bottom: 20px;
+    margin:30px;
+  }
 
-#watchEverywhere .content_area h1 {
-    color: white;
-    font-size: 5rem;
-}
+  .try {
+    width: 200px;
+    margin: 0 10px;
+    font-size:17px;
+    min-height:50px;
+  }
 
-#watchEverywhere .content_area h3 {
-    color: white;
-    font-size: 2.4rem;
-    font-weight: normal;
-    margin-top: 1.5rem;
-}
-
-
-
-/* kids profile section starting form here */
-#kidsProfile {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-}
-
-#kidsProfile .content_area {
+  .search1 {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    margin: 30px;
+    width: 50%;
+    margin: 0 10px;
+    margin-bottom: 40px;
+  }
+
+h4 {
+  color:white;
+}
+
+  .box1 {
+    width: 100%;
+    margin-bottom: 20px;
+    margin:30px;
+  }
+
+  .try1 {
+    width: 200px;
+    margin: 0 10px;
+    font-size:17px;
+    min-height:50px;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-
-#kidsProfile .content_area h1 {
-    color: white;
-    font-size: 5rem;
-}
-
-#kidsProfile .content_area h3 {
-    color: white;
-    font-size: 2.4rem;
-    font-weight: normal;
-    margin-top: 1.5rem;
-}
-
-#kidsProfile .screen_area {
-    position: relative;
-}
-
-#kidsProfile .screen_area img {
-    width: 90%;
-}
-
-/* faq's section starting here */
-#faq h1 {
-    font-size: 4.8rem;
+    align-items: center;
+    align-self: center;
     text-align: center;
-    font-weight: bold;
-    color: white;
-}
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-#faq .faq_area {
-    margin: 2.5rem 0;
-}
-
-#faq .faq_area .faq {
-    background-color: #2d2d2d;
-    color: white;
-    padding: 2.75rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0;
-    cursor: pointer;
-    transition: .2s;
-}
-
-#faq .faq_area .faq:hover {
-    background-color: #454545;
-
-}
-
-#faq .faq_area .faq h4 {
-    font-size: 2.2rem;
-    font-weight: normal;
-}
-
-#faq .faq_area .faq i {
-    font-size: 2.5rem;
-}
-
-#faq h4 {
-    color: white;
+  .text h1 {
     font-size: 2rem;
-    font-weight: normal;
-    text-align: center;
-}
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-#faq .email_sec {
-    margin: 2rem 0;
-    display: flex;
-    gap: .8rem;
-    justify-content: center;
-}
+  .text p {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-#faq .email_sec input {
-    background-color: #1f1919;
-    border: 1px solid grey;
-    color: lightgrey;
-    padding: 1.6rem;
-    outline: none;
-    border-radius: .45rem;
-    width: 34rem;
-}
+  .quest .textbox {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
-#faq .email_sec .get_started_btn {
-    background-color: #e50913;
-    border: none;
-    color: white;
-    height: 100%;
-    padding: 1rem 2rem;
-    font-size: 2.3rem;
-    font-weight: 600;
-    border-radius: .45rem;
-    transition: .2s;
-    cursor: pointer;
-}
-
-#faq .email_sec .get_started_btn i {
-    margin-left: 1.2rem;
-}
-
-#faq .email_sec .get_started_btn:hover {
-    background-color: #c50b14;
-}
-
-#faq .email_sec input::placeholder {
-    color: lightgrey;
-}
-
-footer {
-    padding: 5rem 0;
+  .quest {
     width: 80%;
-    margin: 0 auto;
-}
-
-footer h4 {
-    color: #ffffffb3;
-    font-size: 1.7rem;
-    font-weight: normal;
-    text-decoration: underline;
-}
-
-footer .footer_area {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-footer .footer_area .col {
-    margin-top: 1rem;
-}
-
-footer .footer_area .col ul li {
-    color: #ffffffb3;
-    list-style: none;
-    font-size: 1.4rem;
-    margin: 1.3rem 0;
-    text-decoration: underline;
-}
-
-footer select {
-    color: white;
-    font-size: 1.4rem;
-    background-color: #1f1919;
-    padding: .6rem 2.25rem;
-    border-radius: .5rem;
-}
-
-footer .tranlation_area {
-    position: relative;
-}
-
-footer .tranlation_area img {
-    position: absolute;
-    top: .65rem;
-    left: .5rem;
-}
-
-footer p {
-    color: #ffffffb3;
-    font-size: 1.4rem;
-    padding-top: 2rem;
-}
-
-@media (max-width:1024px) and (min-width:769px) {
-    nav {
-        padding: 2rem 3rem;
-    }
-
-    nav ul li .logo {
-        width: 15rem;
-    }
-
-    header .header_content h1 {
-        font-size: 4.5rem;
-    }
-
-    /* watch tv section start here */
-    section {
-        padding: 7rem 4rem;
-    }
-
-    #watchTv {
-        display: grid;
-        grid-template-columns: repeat(2, 470px);
-    }
-
-    #watchTv .screen_area img {
-        width: 100%;
-    }
-
-    #watchTv .video_area {
-        position: absolute;
-        top: 7rem;
-        left: 6rem;
-        width: 100%;
-    }
-
-    #watchTv .video_area video {
-        width: 75%;
-    }
-
-    /* downloadShows starting form here */
-    #downloadShows .screen_area .box_area {
-        left: 8rem;
-        width: 26rem;
-    }
-
-    /* footer code */
-    footer {
-
-        width: 95%;
-
-    }
-}
-
-@media (max-width:768px) and (min-width:540px) {
-    nav {
-        padding: 2rem 3rem;
-    }
-
-    nav ul li .logo {
-        width: 9.5rem;
-    }
-
-    header .header_content h1 {
-        font-size: 3.5rem;
-    }
-
-    header .header_content .email_sec input {
-
-        padding: 2rem;
-        height: 6.5rem;
-        width: 42rem;
-    }
-
-    /* watch tv section start here */
-    section {
-        padding: 7rem 4rem;
-    }
-
-    #watchTv {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #watchTv .content_area {
-        align-items: center;
-    }
-
-    #watchTv .content_area h1 {
-        color: white;
-        font-size: 3rem;
-    }
-
-    #watchTv .content_area h3 {
-
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-
-    /* downloadShows starting form here */
-    #downloadShows {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #downloadShows .screen_area {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-
-
-    #downloadShows .content_area h1 {
-
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    #downloadShows .content_area h3 {
-        font-size: 1.85rem;
-        text-align: center;
-    }
-
-    #downloadShows .screen_area img {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    #downloadShows .screen_area .box_area {
-        width: 37rem;
-
-    }
-
-    /* watch everywhere section start here */
-
-
-    #watchEverywhere {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #watchEverywhere .content_area {
-        align-items: center;
-    }
-
-    #watchEverywhere .content_area h1 {
-        color: white;
-        font-size: 3rem;
-    }
-
-    #watchEverywhere .content_area h3 {
-
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-
-    /* kids profile section */
-    #kidsProfile {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #kidsProfile .screen_area {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-    #kidsProfile .content_area h1 {
-
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    #kidsProfile .content_area h3 {
-        font-size: 1.85rem;
-        text-align: center;
-    }
-
-    #kidsProfile .screen_area img {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /* footer code */
-    footer {
-
-        width: 90%;
-    }
-
-    footer .footer_area {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    footer .footer_area .col {
-        margin-top: -1rem;
-    }
-}
-
-@media (max-width:539px) {
-    header {
-
-        height: 50rem;
-
-    }
-
-    nav {
-        padding: 2rem 3rem;
-    }
-
-    nav ul li .logo {
-        width: 9.5rem;
-    }
-
-    header .header_content {
-        padding: 0 4.5rem;
-    }
-
-    header .header_content h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    header .header_content h3 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    header .header_content h4 {
-        font-size: 1.7rem;
-        line-height: 2.75rem;
-        text-align: center;
-    }
-
-    header .header_content .email_sec {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.75rem;
-    }
-
-    header .header_content .email_sec .get_started_btn {
-        padding: 1rem 2rem;
-        font-size: 1.8rem;
-    }
-
-
-    /* watch tv section start here */
-    section {
-        padding: 7rem 4rem;
-    }
-
-    #watchTv {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #watchTv .content_area {
-        align-items: center;
-    }
-
-    #watchTv .content_area h1 {
-        color: white;
-        font-size: 3rem;
-    }
-
-    #watchTv .content_area h3 {
-
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    #watchTv .screen_area img {
-        width: 100%;
-    }
-
-    #watchTv .screen_area video {
-        width: 100%;
-    }
-
-    #watchTv .video_area {
-        top: 5rem;
-        left: 4rem;
-    }
-
-    /* downloadShows starting form here */
-    #downloadShows {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #downloadShows .screen_area {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-
-
-    #downloadShows .content_area h1 {
-
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    #downloadShows .content_area h3 {
-        font-size: 1.85rem;
-        text-align: center;
-    }
-
-    #downloadShows .screen_area img {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    #downloadShows .screen_area .box_area {
-        width: 27rem;
-        left: 2rem;
-        bottom: 0;
-        padding: 0 1rem;
-
-    }
-
-
-    /* watch everywhere section starts here */
-    #watchEverywhere {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #watchEverywhere .content_area {
-        align-items: center;
-    }
-
-    #watchEverywhere .content_area h1 {
-        color: white;
-        font-size: 3rem;
-    }
-
-    #watchEverywhere .content_area h3 {
-
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-
-    /* kids profile starting form here */
-    #kidsProfile {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #kidsProfile .screen_area {
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
-
-
-
-    #kidsProfile .content_area h1 {
-
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    #kidsProfile .content_area h3 {
-        font-size: 1.85rem;
-        text-align: center;
-    }
-
-    #kidsProfile .screen_area img {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    /*  faq's section starting here */
-    #faq h1 {
-        font-size: 2.8rem;
-        text-align: center;
-        font-weight: bold;
-        color: white;
-    }
-
-
-    #faq .faq_area .faq {
-
-        padding: 2.25rem 2rem;
-    }
-
-    #faq .faq_area .faq h4 {
-        font-size: 2rem;
-
-    }
-
-    #faq .faq_area .faq i {
-        font-size: 2.2rem;
-    }
-
-    #faq h4 {
-        font-size: 1.7rem;
-        line-height: 2.75rem;
-        text-align: center;
-    }
-
-    #faq .email_sec {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.75rem;
-    }
-
-    #faq .email_sec .get_started_btn {
-        padding: 1rem 2rem;
-        font-size: 1.8rem;
-    }
-
-    /* footer code */
-    footer {
-
-        width: 90%;
-    }
-
-    footer .footer_area {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    footer .footer_area .col {
-        margin-top: -1rem;
-    }
+    min-height: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

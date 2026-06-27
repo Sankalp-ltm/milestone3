@@ -1,12 +1,12 @@
 aws_region = "ap-south-1"
 
-vpc_cidr = "11.0.0.0/16"
-vpc_name = "main-vpc"
+vpc_cidr = "10.0.0.0/16"
+vpc_name = "sankalp-vpc"
 
-public_subnet_cidr  = "11.0.1.0/24"
+public_subnet_cidr  = "10.0.1.0/24"
 public_subnet_name  = "public-subnet"
 
-igw_name = "main-igw"
+igw_name = "sankalp-igw"
 
 route_cidr       = "0.0.0.0/0"
 route_table_name = "public-route-table"

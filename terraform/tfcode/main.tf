@@ -7,6 +7,6 @@ resource "aws_instance" "tf_aws_instance" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "my-ec2-instance"
+    Name = "sankalp-ec2-instance"
   }
 }

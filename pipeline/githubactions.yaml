@@ -1,25 +1,27 @@
-name: Deploy to Tomcat9
+name: cicd
+
 on:
-  push:
-    branches: [master]
+ push:
+  branches:
+  - master
+
 jobs:
-  deploy:
-    runs-on: self-hosted
-    steps:
+  build:
+   runs-on: self-hosted
+
+   steps:
       - uses: actions/checkout@v4
-      - name: Build
-        run: |
-          chmod +x build.sh
-          ./build.sh
-      - name: Deploy
-        run: |
-          sudo apt update
-          sudo apt install -y openjdk-17-jdk
-          sudo apt install -y tomcat10 tomcat10-admin
-          sudo chmod 777 build.sh
-          sudo rm -rf ROOT.war
-          ./build.sh
-          sudo rm -rf /var/lib/tomcat10/webapps/*
-          sudo cp ROOT.war /var/lib/tomcat10/webapps/
-          sudo chown tomcat:tomcat /var/lib/tomcat10/webapps/
-          sudo systemctl start tomcat10
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - run: chmod +x build.sh
+      - run: ./build.sh
+      - run: |
+         sudo systemctl stop tomcat9
+         sudo rm -rf /var/lib/tomcat9/webapps/ROOT
+         sudo rm -f /var/lib/tomcat9/webapps/ROOT.war
+         sudo apt update
+         sudo apt install tomcat9 -y
+         sudo cp ROOT.war /var/lib/tomcat9/webapps/
+         sudo systemctl restart tomcat9
